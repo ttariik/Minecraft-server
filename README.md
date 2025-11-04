@@ -21,12 +21,37 @@ Self-hosted Minecraft server with automated deployment, monitoring, and manageme
 ### Prerequisites
 
 - Ubuntu 22.04 LTS or compatible Linux distribution
-- Java 17 or higher
+- Java 17 or higher (for bare-metal installation)
+- Docker and Docker Compose (for containerized deployment)
 - Minimum 2GB RAM
 - Minimum 10GB free disk space
 - Port 25565 (TCP) available
 
-### Server Setup
+### Docker Deployment (Recommended)
+
+```bash
+# Clone repository
+git clone https://github.com/ttariik/Minecraft-server.git
+cd Minecraft-server
+
+# Make deploy script executable
+chmod +x docker-deploy.sh
+
+# Deploy with Docker
+./docker-deploy.sh
+
+# Or manually with docker-compose
+docker-compose up -d
+```
+
+Docker deployment includes:
+- Minecraft server container
+- Web dashboard (nginx)
+- Automatic health checks
+- Volume persistence for worlds, logs, backups
+- Security hardening (non-root user, dropped capabilities)
+
+### Bare-Metal Server Setup
 
 ```bash
 # Install Java 17
@@ -64,21 +89,38 @@ Required environment variables:
 
 ## Usage
 
-### Start Server
+### Docker Deployment
 
 ```bash
+# Start services
+docker-compose up -d
+
+# View logs
+docker-compose logs -f minecraft-server
+
+# Stop services
+docker-compose stop
+
+# Stop and remove containers
+docker-compose down
+
+# Restart services
+docker-compose restart
+
+# Access web dashboard
+# Open http://YOUR_SERVER_IP:8080 in browser
+```
+
+### Bare-Metal Deployment
+
+```bash
+# Start Server
 ./start.sh
-```
 
-### Stop Server
-
-```bash
+# Stop Server
 ./stop.sh
-```
 
-### View Logs
-
-```bash
+# View Logs
 tail -f logs/latest.log
 ```
 
