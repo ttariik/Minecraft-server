@@ -1,0 +1,67 @@
+# Environment files
+.env
+*.env.local
+
+# Minecraft Server Files
+server.jar
+logs/
+worlds/
+backups/
+cache/
+usercache.json
+banned-ips.json
+banned-players.json
+ops.json
+whitelist.json
+eula.txt
+server.properties
+
+# System files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# Node modules (if using Node.js for web interface)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Secrets and credentials
+*.key
+*.pem
+*.crt
+secrets/
+credentials/
+
+# Build outputs
+dist/
+build/
+*.tar.gz
+*.zip
+
