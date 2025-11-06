@@ -96,7 +96,7 @@ Required environment variables:
 docker-compose up -d
 
 # View logs
-docker-compose logs -f minecraft-server
+docker-compose logs -f mc-server
 
 # Stop services
 docker-compose stop
