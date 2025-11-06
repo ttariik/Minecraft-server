@@ -6,8 +6,8 @@
 set -euo pipefail
 
 SSH_KEY="${SSH_KEY:-$HOME/.ssh/v_server_key}"
-SSH_USER="${SSH_USER:-tsabanovic}"
-SSH_HOST="${SSH_HOST:-91.99.193.112}"
+SSH_USER="${SSH_USER:-YOUR_USERNAME}"
+SSH_HOST="${SSH_HOST:-YOUR_SERVER_IP}"
 REMOTE_DIR="${REMOTE_DIR:-~/minecraft-server}"
 
 # Validation

@@ -1,7 +1,7 @@
 # Minecraft Server Dockerfile
 # Multi-stage build for optimized image size
 
-FROM eclipse-temurin:17-jre-jammy
+FROM eclipse-temurin:21-jre-jammy
 
 # Security: Non-root user
 RUN groupadd -r minecraft && useradd -r -g minecraft -u 1000 minecraft

@@ -59,9 +59,7 @@ temp/
 secrets/
 credentials/
 
-# Build outputs
-dist/
-build/
-*.tar.gz
-*.zip
+# Verification scripts (may contain test IPs)
+check_final.sh
+check_project.sh
 
