@@ -6,15 +6,56 @@ Self-hosted Minecraft server with automated deployment, monitoring, and manageme
 
 ## Table of Contents
 
-1. [Installation](#installation)
-2. [Environment Setup](#environment-setup)
-3. [Usage](#usage)
-4. [Configuration](#configuration)
-5. [Security Guidelines](#security-guidelines)
-6. [Backup and Recovery](#backup-and-recovery)
-7. [Monitoring](#monitoring)
-8. [License](#license)
-9. [Contact](#contact)
+1. [Description](#description)
+2. [Quickstart](#quickstart)
+3. [Installation](#installation)
+4. [Environment Setup](#environment-setup)
+5. [Usage](#usage)
+6. [Configuration](#configuration)
+7. [Security Guidelines](#security-guidelines)
+8. [Backup and Recovery](#backup-and-recovery)
+9. [Monitoring](#monitoring)
+10. [License](#license)
+11. [Contact](#contact)
+
+## Description
+
+Self-hosted Minecraft server with automated deployment, monitoring, and management interface. This project provides a containerized Minecraft server solution with Docker, including a web dashboard for monitoring and management.
+
+Key features:
+- Docker-based deployment with docker-compose
+- Automated health checks and container restart
+- Volume persistence for worlds, logs, and backups
+- Web dashboard for server monitoring
+- Security hardening (non-root user, dropped capabilities)
+- Backup and restore functionality
+
+## Quickstart
+
+### Prerequisites
+- Docker and Docker Compose installed
+- Minimum 2GB RAM available
+- Ports 25565 (Minecraft) and 8888 (Web Dashboard) available
+
+### Quick Start Steps
+
+1. **Clone the repository:**
+```bash
+git clone https://github.com/ttariik/Minecraft-server.git
+cd Minecraft-server
+```
+
+2. **Deploy with Docker:**
+```bash
+chmod +x docker-deploy.sh
+./docker-deploy.sh
+```
+
+3. **Access the server:**
+- Minecraft Server: Connect to `YOUR_SERVER_IP:25565`
+- Web Dashboard: Open `http://YOUR_SERVER_IP:8888` in browser
+
+The server will start automatically and persist all data (worlds, logs, backups) in local directories.
 
 ## Installation
 
@@ -108,7 +149,7 @@ docker-compose down
 docker-compose restart
 
 # Access web dashboard
-# Open http://YOUR_SERVER_IP:8080 in browser
+# Open http://YOUR_SERVER_IP:8888 in browser
 ```
 
 ### Bare-Metal Deployment
@@ -126,7 +167,7 @@ tail -f logs/latest.log
 
 ### Access Web Interface
 
-Open `http://YOUR_SERVER_IP:8080` in browser.
+Open `http://YOUR_SERVER_IP:8888` in browser.
 
 ## Configuration
 
@@ -147,7 +188,7 @@ Edit `server.properties` to configure:
 sudo ufw allow 25565/tcp
 
 # Allow web interface port
-sudo ufw allow 8080/tcp
+sudo ufw allow 8888/tcp
 ```
 
 ## Security Guidelines
@@ -183,7 +224,7 @@ crontab -l | grep backup
 
 ### Server Status
 
-Access web dashboard at `http://YOUR_SERVER_IP:8080` to view:
+Access web dashboard at `http://YOUR_SERVER_IP:8888` to view:
 - Server status
 - Player count
 - CPU/Memory usage
@@ -192,7 +233,7 @@ Access web dashboard at `http://YOUR_SERVER_IP:8080` to view:
 ### API Endpoint
 
 ```bash
-curl http://YOUR_SERVER_IP:8080/api/status
+curl http://YOUR_SERVER_IP:8888/api/status
 ```
 
 ## License
