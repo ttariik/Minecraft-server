@@ -47,8 +47,8 @@ services:
     ports:
       - "8888:80"
     volumes:
-      - ./index.html:/usr/share/nginx/html/index.html:ro
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - minecraft-index-html:/usr/share/nginx/html/index.html:ro
+      - minecraft-nginx-conf:/etc/nginx/nginx.conf:ro
     networks:
       - minecraft-network
     depends_on:
@@ -63,4 +63,6 @@ volumes:
   minecraft-logs:
   minecraft-backups:
   minecraft-server-properties:
+  minecraft-index-html:
+  minecraft-nginx-conf:
 
