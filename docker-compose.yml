@@ -9,7 +9,6 @@ services:
     restart: unless-stopped
     ports:
       - "25565:25565/tcp"
-      - "19132:19132/udp"
     environment:
       - SERVER_JAR=server.jar
       - MAX_RAM=2G
