@@ -1,4 +1,4 @@
-version: '3.8'
+
 
 services:
   mc-server:
@@ -19,10 +19,10 @@ services:
       - WORLD_NAME=world
       - TZ=UTC
     volumes:
-      - ./worlds:/minecraft/worlds
-      - ./logs:/minecraft/logs
-      - ./backups:/minecraft/backups
-      - ./server.properties:/minecraft/server.properties:ro
+      - minecraft-worlds:/minecraft/worlds
+      - minecraft-logs:/minecraft/logs
+      - minecraft-backups:/minecraft/backups
+      - minecraft-server-properties:/minecraft/server.properties:ro
     networks:
       - minecraft-network
     healthcheck:
@@ -57,4 +57,10 @@ services:
 networks:
   minecraft-network:
     driver: bridge
+
+volumes:
+  minecraft-worlds:
+  minecraft-logs:
+  minecraft-backups:
+  minecraft-server-properties:
 
