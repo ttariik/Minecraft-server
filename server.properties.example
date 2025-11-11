@@ -1,0 +1,61 @@
+# Minecraft Server Properties
+# Generated configuration file
+
+# Server Settings
+server-port=25565
+server-ip=
+max-players=20
+online-mode=true
+white-list=false
+enforce-whitelist=false
+
+# World Settings
+level-name=world
+level-seed=
+level-type=minecraft\:normal
+generate-structures=true
+generator-settings={}
+allow-nether=true
+
+# Game Settings
+gamemode=survival
+difficulty=normal
+hardcore=false
+pvp=true
+spawn-monsters=true
+spawn-npcs=true
+spawn-animals=true
+snooper-enabled=true
+
+# Performance
+max-tick-time=60000
+max-world-size=29999984
+network-compression-threshold=256
+view-distance=10
+simulation-distance=10
+max-build-height=320
+
+# Resource Pack
+resource-pack=
+resource-pack-prompt=
+resource-pack-sha1=
+
+# Miscellaneous
+motd=A Minecraft Server
+enable-command-block=false
+enable-query=false
+enable-rcon=false
+rcon.port=25575
+rcon.password=
+enable-jmx-monitoring=false
+
+# Functionality
+force-gamemode=false
+broadcast-rcon-to-ops=true
+broadcast-console-to-ops=true
+function-permission-level=2
+max-chained-neighbor-updates=1000000
+
+# Logging
+enable-status=true
+

@@ -1,0 +1,60 @@
+# Docker ignore patterns
+# Exclude unnecessary files from Docker build context
+
+# Git files
+.git/
+.gitignore
+.gitattributes
+
+# Documentation
+README.md
+*.md
+
+# Development files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs and runtime data
+logs/
+*.log
+
+# Backup files
+backups/
+*.tar.gz
+*.zip
+
+# World data (will be mounted as volume)
+worlds/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# PDF files
+*.pdf
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Server runtime files (will be created in container)
+server.pid
+server_fifo
+usercache.json
+banned-ips.json
+banned-players.json
+ops.json
+whitelist.json
+
+# Build artifacts
+*.jar
+!server.jar
+
